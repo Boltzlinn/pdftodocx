@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei" crossorigin="anonymous">
+        <style>
+/*--------------------------------------------------------------------------------------------- * Copyright (c) Microsoft Corporation. All rights reserved. * Licensed under the MIT License. See License.txt in the project root for license information. *--------------------------------------------------------------------------------------------*/ body { font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback"; font-size: 14px; padding: 0 12px; line-height: 22px; word-wrap: break-word; } body.scrollBeyondLastLine { margin-bottom: calc(100vh - 22px); } body.showEditorSelection .code-line { position: relative; } body.showEditorSelection .code-active-line:before, body.showEditorSelection .code-line:hover:before { content: ""; display: block; position: absolute; top: 0; left: -12px; height: 100%; } body.showEditorSelection li.code-active-line:before, body.showEditorSelection li.code-line:hover:before { left: -30px; } .vscode-light.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(0, 0, 0, 0.15); } .vscode-light.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(0, 0, 0, 0.40); } .vscode-dark.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 255, 255, 0.4); } .vscode-dark.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 255, 255, 0.60); } .vscode-high-contrast.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 160, 0, 0.7); } .vscode-high-contrast.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 160, 0, 1); } img { max-width: 100%; max-height: 100%; } a { color: #4080D0; text-decoration: none; } a:focus, input:focus, select:focus, textarea:focus { outline: 1px solid -webkit-focus-ring-color; outline-offset: -1px; } hr { border: 0; height: 2px; border-bottom: 2px solid; } h1 { padding-bottom: 0.3em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; } h1, h2, h3 { font-weight: normal; } h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: inherit; line-height: auto; } a:hover { color: #4080D0; text-decoration: underline; } table { border-collapse: collapse; } table > thead > tr > th { text-align: left; border-bottom: 1px solid; } table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table > tbody > tr > td { padding: 5px 10px; } table > tbody > tr + tr > td { border-top: 1px solid; } blockquote { margin: 0 7px 0 5px; padding: 0 16px 0 10px; border-left: 5px solid; } code { font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback"; font-size: 14px; line-height: 19px; } body.wordWrap pre { white-space: pre-wrap; } .mac code { font-size: 12px; line-height: 18px; } code > div { padding: 16px; border-radius: 3px; overflow: auto; } /** Theming */ .vscode-light { color: rgb(30, 30, 30); } .vscode-dark { color: #DDD; } .vscode-high-contrast { color: white; } .vscode-light code { color: #A31515; } .vscode-dark code { color: #D7BA7D; } .vscode-light code > div { background-color: rgba(220, 220, 220, 0.4); } .vscode-dark code > div { background-color: rgba(10, 10, 10, 0.4); } .vscode-high-contrast code > div { background-color: rgb(0, 0, 0); } .vscode-high-contrast h1 { border-color: rgb(0, 0, 0); } .vscode-light table > thead > tr > th { border-color: rgba(0, 0, 0, 0.69); } .vscode-dark table > thead > tr > th { border-color: rgba(255, 255, 255, 0.69); } .vscode-light h1, .vscode-light hr, .vscode-light table > tbody > tr + tr > td { border-color: rgba(0, 0, 0, 0.18); } .vscode-dark h1, .vscode-dark hr, .vscode-dark table > tbody > tr + tr > td { border-color: rgba(255, 255, 255, 0.18); } .vscode-light blockquote, .vscode-dark blockquote { background: rgba(127, 127, 127, 0.1); border-color: rgba(0, 122, 204, 0.5); } .vscode-high-contrast blockquote { background: transparent; border-color: #fff; }
+</style>
+<style>
+/* Tomorrow Theme */ /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */ /* Original theme - https://github.com/chriskempson/tomorrow-theme */ /* Tomorrow Comment */ .hljs-comment, .hljs-quote { color: #8e908c; } /* Tomorrow Red */ .hljs-variable, .hljs-template-variable, .hljs-tag, .hljs-name, .hljs-selector-id, .hljs-selector-class, .hljs-regexp, .hljs-deletion { color: #c82829; } /* Tomorrow Orange */ .hljs-number, .hljs-built_in, .hljs-builtin-name, .hljs-literal, .hljs-type, .hljs-params, .hljs-meta, .hljs-link { color: #f5871f; } /* Tomorrow Yellow */ .hljs-attribute { color: #eab700; } /* Tomorrow Green */ .hljs-string, .hljs-symbol, .hljs-bullet, .hljs-addition { color: #718c00; } /* Tomorrow Blue */ .hljs-title, .hljs-section { color: #4271ae; } /* Tomorrow Purple */ .hljs-keyword, .hljs-selector-tag { color: #8959a8; } .hljs { display: block; overflow-x: auto; color: #4d4d4c; padding: 0.5em; } .hljs-emphasis { font-style: italic; } .hljs-strong { font-weight: bold; }
+</style>
+<style>
+ul.contains-task-list { padding-left: 0; } ul ul.contains-task-list { padding-left: 40px; } .task-list-item { list-style-type: none; } .task-list-item-checkbox { vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="latexword">将latex编写的毕业论文转换成word格式</h1>
+<p>你还在为知网查重的论文格式发愁吗？也许下面的方法会帮到你😉</p>
+<h2 id="">所需材料</h2>
+<ol>
+<li>
+<p>利用模板<a href="https://github.com/mohuangrui/ucasthesis">ucasthesis</a>模板撰写的pdf文件；</p>
+</li>
+<li>
+<p>Adobe Acrobat Pro DC。点<a href="https://acrobat.adobe.com/cn/zh-Hans/free-trial-download.html">这里</a>可以下载试用版；</p>
+</li>
+<li>
+<p>四款adobe字体：</p>
+<ul>
+<li><a href="./adobe%E5%AD%97%E4%BD%93/AdobeSongStd-Light.otf">AdobeSongStd-Light</a>;</li>
+<li><a href="./adobe%E5%AD%97%E4%BD%93/AdobeFangsongStd-Regular.otf">AdobeFangSongStd-Regular</a>;</li>
+<li><a href="./adobe%E5%AD%97%E4%BD%93/AdobeKaitiStd-Regular.otf">AdobeKaitiStd-Regular</a>;</li>
+<li><a href="./adobe%E5%AD%97%E4%BD%93/AdobeHeitiStd-Regular.otf">AdobeHeitiStd-Regular</a>.</li>
+</ul>
+<p>如果电脑中没有安装上述字体，之后编译阶段会提示，然后电击上述字体安装即可，这些字体在 <em>adobe字体</em>文件夹下。</p>
+</li>
+</ol>
+<h2 id="">步骤</h2>
+<ol>
+<li>打开ucasthesis模板Style文件夹中的artratex.sty文件，定位到222行，你将看到如下代码<pre class="hljs"><code><div><span class="hljs-tag">\<span class="hljs-name">ifartx</span></span>@windows<span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKmainfont</span><span class="hljs-string">[AutoFakeBold,ItalicFont=KaiTi]</span><span class="hljs-string">{SimSun}</span></span><span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKsansfont</span><span class="hljs-string">[AutoFakeBold]</span><span class="hljs-string">{SimHei}</span></span><span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKmonofont</span><span class="hljs-string">{FangSong}</span></span><span class="hljs-comment">%</span>
+<span class="hljs-tag">\<span class="hljs-name">else</span></span><span class="hljs-tag">\<span class="hljs-name">ifartx</span></span>@mac<span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKmainfont</span><span class="hljs-string">[ItalicFont=Kaiti SC,BoldItalicFont=Kaiti SC Bold]</span><span class="hljs-string">{Songti SC Light}</span></span><span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKsansfont</span><span class="hljs-string">{Heiti SC}</span></span><span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKmonofont</span><span class="hljs-string">{STFangsong}</span></span><span class="hljs-comment">%</span>
+<span class="hljs-tag">\<span class="hljs-name">else</span></span><span class="hljs-tag">\<span class="hljs-name">ifartx</span></span>@adobe<span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKmainfont</span><span class="hljs-string">[AutoFakeBold,ItalicFont=AdobeKaitiStd-Regular]</span><span class="hljs-string">{AdobeSongStd-Light}</span></span><span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKsansfont</span><span class="hljs-string">[AutoFakeBold]</span><span class="hljs-string">{AdobeHeitiStd-Regular}</span></span><span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKmonofont</span><span class="hljs-string">{AdobeFangsongStd-Regular}</span></span><span class="hljs-comment">%</span>
+<span class="hljs-tag">\<span class="hljs-name">fi</span></span>
+</div></code></pre>
+</li>
+<li>将 <em>@adobe</em> 后的字体配置替换掉你所用操作系统后的字体配置，例如，如果你使用的windows系统，那么就把 <em>@adobe</em> 后的字体配置复制到 <em>@windows</em>后面，然后把 <em>@Windows</em> 后的字体配置注释掉，结果应如下面的代码所示：<pre class="hljs"><code><div><span class="hljs-tag">\<span class="hljs-name">ifartx</span></span>@windows<span class="hljs-comment">%</span>
+    <span class="hljs-comment">%\setCJKmainfont[AutoFakeBold,ItalicFont=KaiTi]{SimSun}%</span>
+    <span class="hljs-comment">%\setCJKsansfont[AutoFakeBold]{SimHei}%</span>
+    <span class="hljs-comment">%\setCJKmonofont{FangSong}%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKmainfont</span><span class="hljs-string">[AutoFakeBold,ItalicFont=AdobeKaitiStd-Regular]</span><span class="hljs-string">{AdobeSongStd-Light}</span></span><span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKsansfont</span><span class="hljs-string">[AutoFakeBold]</span><span class="hljs-string">{AdobeHeitiStd-Regular}</span></span><span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKmonofont</span><span class="hljs-string">{AdobeFangsongStd-Regular}</span></span><span class="hljs-comment">%</span>
+<span class="hljs-tag">\<span class="hljs-name">else</span></span><span class="hljs-tag">\<span class="hljs-name">ifartx</span></span>@mac<span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKmainfont</span><span class="hljs-string">[ItalicFont=Kaiti SC,BoldItalicFont=Kaiti SC Bold]</span><span class="hljs-string">{Songti SC Light}</span></span><span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKsansfont</span><span class="hljs-string">{Heiti SC}</span></span><span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKmonofont</span><span class="hljs-string">{STFangsong}</span></span><span class="hljs-comment">%</span>
+<span class="hljs-tag">\<span class="hljs-name">else</span></span><span class="hljs-tag">\<span class="hljs-name">ifartx</span></span>@adobe<span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKmainfont</span><span class="hljs-string">[AutoFakeBold,ItalicFont=AdobeKaitiStd-Regular]</span><span class="hljs-string">{AdobeSongStd-Light}</span></span><span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKsansfont</span><span class="hljs-string">[AutoFakeBold]</span><span class="hljs-string">{AdobeHeitiStd-Regular}</span></span><span class="hljs-comment">%</span>
+    <span class="hljs-tag">\<span class="hljs-name">setCJKmonofont</span><span class="hljs-string">{AdobeFangsongStd-Regular}</span></span><span class="hljs-comment">%</span>
+<span class="hljs-tag">\<span class="hljs-name">fi</span></span>
+</div></code></pre>
+</li>
+<li>使用xelatex引擎编译生成pdf文件。如果你安装过上文提到的四款字体，那么应该会正常编译通过，否则就按照编译器的错误提示安装相应字体；</li>
+<li>使用Adobe Acrobat Pro DC将生成的pdf文件转化为word。</li>
+</ol>
+<p>如果你严格按照上述过程做，那么你将得到一个说的过去的word文件，相信应对查重应该是没问题了🎉</p>
+<h2 id="">后记</h2>
+<p>下面列举了此方法可转化与不可转化的内容。</p>
+<h3 id="">可以转化的内容</h3>
+<ol>
+<li>封面、摘要、原创声明、参考文献、致谢的内容与格式；</li>
+<li>正文内容以及章节段落格式；</li>
+<li>不包含分数如<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{a}{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.695392em;"></span><span class="strut bottom" style="height:1.040392em;vertical-align:-0.345em;"></span><span class="base"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">b</span></span></span></span><span style="top:-3.15em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.2em;"><svg width='400em' height='0.2em' viewBox='0 0 400000 200' preserveAspectRatio='xMinYMin slice'><path d='M0 80H400000 v40H0z M0 80H400000 v40H0z'/></svg></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>以及积分、求和符号<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∫</mo></mrow><annotation encoding="application/x-tex">\int</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.805em;"></span><span class="strut bottom" style="height:1.11112em;vertical-align:-0.30612em;"></span><span class="base"><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∫</span></span></span></span>、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∑</mo></mrow><annotation encoding="application/x-tex">\sum</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="base"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span></span></span></span>的公式，格式与编号均可以保留；</li>
+<li>图片与表格的内容与格式；</li>
+<li>页眉的内容与格式。</li>
+</ol>
+<h3 id="">不能完美转化的内容</h3>
+<ol>
+<li>目录；</li>
+<li>公式中的：
+<ul>
+<li>分数<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{a}{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.695392em;"></span><span class="strut bottom" style="height:1.040392em;vertical-align:-0.345em;"></span><span class="base"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">b</span></span></span></span><span style="top:-3.15em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.2em;"><svg width='400em' height='0.2em' viewBox='0 0 400000 200' preserveAspectRatio='xMinYMin slice'><path d='M0 80H400000 v40H0z M0 80H400000 v40H0z'/></svg></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>；</li>
+<li>积分符号<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∫</mo></mrow><annotation encoding="application/x-tex">\int</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.805em;"></span><span class="strut bottom" style="height:1.11112em;vertical-align:-0.30612em;"></span><span class="base"><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∫</span></span></span></span>；</li>
+<li>求和符号<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∑</mo></mrow><annotation encoding="application/x-tex">\sum</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="base"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span></span></span></span>；</li>
+<li>矩阵<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mo fence="true">(</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>a</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>b</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>c</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>d</mi></mrow></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.45em;"></span><span class="strut bottom" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="base"><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">a</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">b</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span></span></span></span></span></p>
+</li>
+</ul>
+</li>
+<li>页脚、脚注会被识别为正文。</li>
+</ol>
+<h2 id="">私获👀</h2>
+<p>由于查重要求去除封面原创声明等，我个人写了一个符合查重要求的主文件，即该文件夹下的<a href="./thesisplain.tex">thesisplain.tex</a>文件。将该文件复制到ucasthesis文件夹下，打开该文件，用相同方法编译产生pdf，再按照前面的方法转为word即可。此方法可省去手动删除封面原创声明的麻烦。</p>
+<blockquote>
+<p>如遇问题，可以通过</p>
+<ul>
+<li>QQ：1715260664</li>
+<li>微信：13051572393</li>
+<li>邮箱：shaoyuelinphysics@gmail.com</li>
+</ul>
+<p>联系我，但我也不保证可以解决😂</p>
+</blockquote>
+
+    </body>
+    </html>

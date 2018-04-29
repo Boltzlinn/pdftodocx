@@ -1,0 +1,47 @@
+\documentclass[doublesided]{Style/ucasthesis}%
+\usepackage[myhdr,number,table,math]{Style/artratex}% document settings
+%如果你参考文献用的作者年份格式，请把上一行的number改为authoryear
+\usepackage{Style/artracom}% user defined commands
+
+\begin{document}
+
+%------------
+%取消首页及目录页眉页脚格式，如果希望保留，请注释掉下面三行
+\pagestyle{empty}
+\fancyfoot{}
+\fancyhead{}
+%------------
+
+作者：{     }%请在此处填入你的名字%
+
+指导老师：{     }%请在此处填入导师名字%
+
+\tableofcontents% 生成目录
+
+\mainmatter
+%------------
+%取消正文页眉页脚格式，如果希望保留，请注释掉下面三行
+\pagestyle{empty}
+\fancyfoot{}
+\fancyhead{}
+%------------
+\input{Tex/Mainmatter}% 正文部分
+
+\appendix
+
+\input{Tex/Appendix}%若无附录或者不希望查重附录请注释掉该行
+
+\backmatter
+%------------
+%取消参考文献页眉页脚格式，如果希望保留，请注释掉下面三行
+\pagestyle{empty}
+\fancyfoot{}
+\fancyhead{}
+%------------
+\intotoc{\bibname}
+\bibliography{Biblio/myref}%请把myref改为你自己的参考文献目录的文件名
+\input{Tex/Backmatter}%致谢部分，如果不希望查重此部分请注释掉该行
+
+
+\end{document}
+%---------------------------------------------------------------------------%
