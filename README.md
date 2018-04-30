@@ -64,7 +64,7 @@
 ### 可以转化的内容
  1. 封面、摘要、原创声明、参考文献、致谢的内容与格式；
  2. 正文内容以及章节段落格式；
- 3. 不包含分数如<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{a}{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.695392em;"></span><span class="strut bottom" style="height:1.040392em;vertical-align:-0.345em;"></span><span class="base"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">b</span></span></span></span><span style="top:-3.15em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.2em;"><svg width='400em' height='0.2em' viewBox='0 0 400000 200' preserveAspectRatio='xMinYMin slice'><path d='M0 80H400000 v40H0z M0 80H400000 v40H0z'/></svg></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>以及积分、求和符号$\int$、$\sum$的公式，格式与编号均可以保留；
+ 3. 不包含分数如$`\frac{a}{b}`$以及积分、求和符号&int;、&sum;的公式，格式与编号均可以保留；
  4. 图片与表格的内容与格式；
  5. 页眉的内容与格式。
 
@@ -72,8 +72,8 @@
 1. 目录；
 2. 公式中的：
     - 分数$\frac{a}{b}$；
-    - 积分符号$\int$；
-    - 求和符号$\sum$；
+    - 积分符号&int;；
+    - 求和符号&sum;；
     - 矩阵
         $$\begin{pmatrix}a&b\\c&d\end{pmatrix}$$
 3. 页脚、脚注会被识别为正文。
