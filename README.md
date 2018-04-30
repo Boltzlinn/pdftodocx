@@ -102,3 +102,6 @@
 [adobe]:https://acrobat.adobe.com/cn/zh-Hans/free-trial-download.html
 [ziti]:https://pan.baidu.com/s/1IRkPcYkpZwOlP0hFEejuAw
 [plain]:./thesisplain.tex
+
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
