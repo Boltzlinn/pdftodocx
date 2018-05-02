@@ -6,6 +6,7 @@
 
 1. 利用模板[ucasthesis]模板撰写的pdf文件；
 2. Adobe Acrobat Pro DC。点[这里][adobe]可以下载试用版；
+3. MS word;
 3. 四款adobe字体：
 
     - AdobeSongStd-Light;
@@ -53,7 +54,7 @@
     \fi
     ```
 3. 使用xelatex引擎编译生成pdf文件。如果你安装过上文提到的四款字体，那么应该会正常编译通过，否则就按照编译器的错误提示安装相应字体；
-4. 使用Adobe Acrobat Pro DC将生成的pdf文件转化为word。
+4. 使用Adobe Acrobat Pro DC将生成的pdf文件转化为word，也可以直接用MS word打开pdf文件然后另存为pdf。
 
 如果你严格按照上述过程做，那么你将得到一个说的过去的word文件，相信应对查重应该是没问题了&#x1F389;
 
